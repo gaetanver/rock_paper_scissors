@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+	<title>Rock Paper Scissors!</title>	
+	<meta charset="utf-8">
+	<link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+	<script type="text/javascript">
+	
+		let myArray = ["rock", "paper", "scissors"];
+		let playerSelection = prompt("rock, paper or scissors?");
+		let computerSelection = myArray[Math.floor(Math.random() * myArray.length)];
+
+		function playRound() {
+		if (computerSelection==playerSelection)
+				console.log("Draw");
+		if (computerSelection=="rock" && playerSelection=="paper")
+				console.log("You win");
+		if (computerSelection=="paper" && playerSelection=="scissors")
+				console.log("You win");
+		if (computerSelection=="scissors" && playerSelection=="rock")
+				console.log("You win");
+		if (computerSelection=="rock" && playerSelection=="scissors")
+				console.log("You lose");
+		if (computerSelection=="scissors" && playerSelection=="paper")
+				console.log("You lose");
+		if (computerSelection=="paper" && playerSelection=="rock")
+				console.log("You lose");	
+		}
+
+console.log(playerSelection);
+console.log(computerSelection);
+playRound();
+
+
+	</script>
+</body>
